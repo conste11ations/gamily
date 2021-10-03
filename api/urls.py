@@ -14,5 +14,4 @@ router.register(r'scenarios', views.ScenarioViewSet)
 urlpatterns = [
     # path('', views.index, name='index'),
     path('', include(router.urls)),
-    path('question/<int:question_id>/', views.detail, name='detail'),
 ]
