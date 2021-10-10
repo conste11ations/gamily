@@ -13,5 +13,6 @@ pip3 install django
 python3 -m django --version // check
 pip3 install djangorestframework
 pip3 install psycopg2-binary
+pip3 install python-dotenv // put .env file in root dir
 python3 manage.py runserver // default port at 8000
 ```
