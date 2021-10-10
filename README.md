@@ -1,6 +1,6 @@
 # gamily
 
-### Running the project
+### Setup for local development
 
 ```
 git clone git@github.com:conste11ations/gamily.git
@@ -8,9 +8,15 @@ cd gamily
 pip install virtualenv
 virtualenv venv
 source venv/bin/activate
-pip install django
-python -m django --version // check
-pip install djangorestframework
-pip install psycopg2-binary
-python manage.py runserver // default port at 8000
+pip3 install django
+python3 -m django --version // check
+pip3 install djangorestframework
+// install postgresql
+// create user admin with password
+// create database gamily with owner admin
+pip3 install psycopg2-binary
+pip3 install python-dotenv 
+// create .env file in root dir
+python3 manage.py migrate
+python3 manage.py runserver // default port at 8000
 ```
