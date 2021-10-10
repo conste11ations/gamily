@@ -8,9 +8,9 @@ cd gamily
 pip install virtualenv
 virtualenv venv
 source venv/bin/activate
-pip install django
-python -m django --version // check
-pip install djangorestframework
-pip install psycopg2-binary
-python manage.py runserver // default port at 8000
+pip3 install django
+python3 -m django --version // check
+pip3 install djangorestframework
+pip3 install psycopg2-binary
+python3 manage.py runserver // default port at 8000
 ```
