@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
+from os.path import join, dirname
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()  # take environment variables from .env.
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,7 +85,7 @@ DATABASES = {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
        'NAME': 'gamily',
        'USER': 'admin',
-       'PASSWORD': '<password>',
+       'PASSWORD': os.environ.get("POSTGRESQL_PASSWORD"),
        'HOST': 'localhost',
        'PORT': 5432,
     }
