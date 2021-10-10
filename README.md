@@ -9,6 +9,7 @@ pip install virtualenv
 virtualenv venv
 source venv/bin/activate
 pip3 install django
+// install postgresql
 python3 -m django --version // check
 pip3 install djangorestframework
 pip3 install psycopg2-binary
