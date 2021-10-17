@@ -39,8 +39,9 @@ heroku-staging	https://git.heroku.com/gamily-heroku.git (push)
 ```
 Execute the following:
 ```
-git push <remote-ref> main # heroku/heroku-staging or whatever you customized
-# optional if your changes have an impact on data model
+git push <remote-ref> main // remote-ref = heroku/heroku-staging
+heroku config:set DISABLE_COLLECTSTATIC=1 --remote <remote-ref>
+// optional below if your changes have an impact on data model
 heroku run python3 manage.py migrate
 ```
 
