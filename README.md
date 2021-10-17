@@ -20,14 +20,26 @@ pip3 install python-dotenv
 python3 manage.py migrate
 python3 manage.py runserver // default port at 8000
 ```
-### Production
+### Staging
 
 https://gamily-heroku.herokuapp.com/
 
+### Production
+
+https://gamily-api.herokuapp.com/ 
+
 ### Deploying to Heroku
 
+set up git remote config:
 ```
-git push heroku main
+heroku	https://git.heroku.com/gamily-heroku.git (fetch)
+heroku	https://git.heroku.com/gamily-heroku.git (push)
+heroku-staging	https://git.heroku.com/gamily-heroku.git (fetch)
+heroku-staging	https://git.heroku.com/gamily-heroku.git (push)
+```
+Execute the following:
+```
+git push <remote-ref> main # heroku/heroku-staging or whatever you customized
 heroku run python3 manage.py migrate # optional if your changes have an impact on data model
 ```
 
