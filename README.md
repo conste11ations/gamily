@@ -42,7 +42,7 @@ Execute the following:
 git push <remote-ref> main // remote-ref = heroku/heroku-staging
 heroku config:set DISABLE_COLLECTSTATIC=1 --remote <remote-ref>
 // optional below if your changes have an impact on data model
-heroku run python3 manage.py migrate
+heroku run python3 manage.py migrate --remote <remote-ref>
 ```
 
 
