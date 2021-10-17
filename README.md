@@ -20,3 +20,19 @@ pip3 install python-dotenv
 python3 manage.py migrate
 python3 manage.py runserver // default port at 8000
 ```
+### Production
+
+https://gamily-heroku.herokuapp.com/
+
+### Deploying to Heroku
+
+```
+git push heroku main
+heroku run python3 manage.py migrate # optional if your changes have an impact on data model
+```
+
+
+### Special notes
+
+Auth endpoints listed here:
+https://dj-rest-auth.readthedocs.io/en/latest/api_endpoints.html
