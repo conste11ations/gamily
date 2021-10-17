@@ -20,4 +20,5 @@ urlpatterns = [
     path('', include('api.urls')),
     path('', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
 ]
