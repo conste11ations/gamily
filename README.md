@@ -20,3 +20,7 @@ pip3 install python-dotenv
 python3 manage.py migrate
 python3 manage.py runserver // default port at 8000
 ```
+### Special notes
+
+Auth endpoints listed here:
+https://dj-rest-auth.readthedocs.io/en/latest/api_endpoints.html
