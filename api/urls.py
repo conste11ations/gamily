@@ -14,4 +14,5 @@ router.register(r'scenarios', views.ScenarioViewSet)
 urlpatterns = [
     # path('', views.index, name='index'),
     path('', include(router.urls)),
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
 ]
