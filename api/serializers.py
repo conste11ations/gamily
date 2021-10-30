@@ -7,21 +7,25 @@ class AccountSerializer(serializers.HyperlinkedModelSerializer):
         model = Account
         fields = ['url', 'email']
 
+class ProfileContextSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Profile
+        fields = ['url', 'credit_score', 'net_worth', 'assets_mv', 'liabilities_mv', 'insurance', 'income', 'expenses', 'profile_id']
 
 class ProfileSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Profile
-        fields = ['url', 'name', 'level', 'net_worth', 'stress_level', 'experience', 'account_id']
+        fields = ['url', 'name', 'age', 'stress_level', 'account_id']
 
 class QuestionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Question
-        fields = ['url', 'question']
+        fields = ['url', 'question', 'category']
 
 class AnswerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Answer
-        fields = ['url', 'answer', 'question_id', 'impact']
+        fields = ['url', 'answer', 'question_id', 'impact', 'description']
 
 class ScenarioSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
