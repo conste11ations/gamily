@@ -8,21 +8,18 @@ class Account(models.Model):
 class Profile(models.Model):
     name = models.CharField(max_length=50)
     age = models.PositiveSmallIntegerField(default=0)
+    education = models.CharField(max_length=50)
     stress_level = models.PositiveSmallIntegerField(default=0)
     account_id = models.ForeignKey(Account, on_delete=models.CASCADE)
-
-class ProfileContext(models.Model):
     credit_score = models.PositiveSmallIntegerField(default=0)
     net_worth = models.IntegerField(default=0)
     assets_mv = models.IntegerField(default=0)
     liabilities_mv = models.IntegerField(default=0)
     insurance = ArrayField(models.CharField(max_length=10, blank=True)) 
     income =  ArrayField(
-        ArrayField(models.IntegerField(default=0), size=2)
-    )
+        ArrayField(models.IntegerField(), size=2))
     expenses = ArrayField(
-        ArrayField(models.IntegerField(default=0), size=2)
-    )
+        ArrayField(models.IntegerField(), size=2))
 
 class Question(models.Model):
     question = models.CharField(max_length=500)
