@@ -32,8 +32,8 @@ https://gamily-api.herokuapp.com/
 
 set up git remote config:
 ```
-heroku	https://git.heroku.com/gamily-heroku.git (fetch)
-heroku	https://git.heroku.com/gamily-heroku.git (push)
+heroku	https://git.heroku.com/gamily-api.git (fetch)
+heroku	https://git.heroku.com/gamily-api.git (push)
 heroku-staging	https://git.heroku.com/gamily-heroku.git (fetch)
 heroku-staging	https://git.heroku.com/gamily-heroku.git (push)
 ```
@@ -41,8 +41,10 @@ Execute the following:
 ```
 git push <remote-ref> main // remote-ref = heroku/heroku-staging
 heroku config:set DISABLE_COLLECTSTATIC=1 --remote <remote-ref>
-// optional below if your changes have an impact on data model
+// optional, if your changes have an impact on data model
 heroku run python3 manage.py migrate --remote <remote-ref>
+// optional, to restore backup
+heroku pg:backups:restore b001 <DATABASE_URL> --app gamily-api
 ```
 
 
