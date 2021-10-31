@@ -42,7 +42,7 @@ SECRET_KEY = 'django-insecure-urk2$s6dl6*^dntm603xo!bue3b!ohbp0s6!tg8qg8z#vrcynv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 # to add localhost here for dev
-ALLOWED_HOSTS = ['gamily-heroku.herokuapp.com', 'gamily-api.herokuapp.com' ]
+ALLOWED_HOSTS = ['gamily-heroku.herokuapp.com', 'gamily-api.herokuapp.com', 'localhost' ]
 
 
 # Application definition
